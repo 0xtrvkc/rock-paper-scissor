@@ -1,57 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/98.css" />
     <title>ROCK PAPER SCISSOR</title>
   </head>
-  <body>
-   
+  <body style="background-color: rgb(201, 201, 201)">
+    <div style="display: flex; flex-direction: column; align-items: center">
+      <div class="window" style="width: 320px">
+        <div class="title-bar">
+          <div class="title-bar-text">rock paper scissor</div>
+        </div>
+        <div class="window-body">
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+            "
+          >
+            <br /><br />
+            <input
+              id="btn"
+              type="button"
+              value="ROCK"
+              style="background-color: rgb(202, 202, 202)"
+            /><br />
+            <input
+              id="btn"
+              type="button"
+              value="PAPER"
+              style="background-color: rgb(202, 202, 202)"
+            /><br />
+            <input
+              id="btn"
+              type="button"
+              value="SCISSOR"
+              style="background-color: rgb(202, 202, 202)"
+            /><br />
+          </div>
 
-    <div style="display:flex;flex-direction:column;align-items:center;">
-      
-
-
-      <div class="title-bar">
-        <div class="title-bar-text"><h4>ROCK PAPER SCISSOR</h4></div>
-        <div class="title-bar-controls">
-          
+          <ul>
+            <li><p id="result"></p></li>
+            <li><p id="scores"></p></li>
+          </ul>
+        </div>
+        <div class="status-bar">
+          <p class="status-bar-field">Press F12 to inspect code</p>
+          <p class="status-bar-field">Only 5 rounds</p>
         </div>
       </div>
+      <br />
 
-      <br><br>
-      <input id="btn" type="button" value="ROCK"><br>
-      <input id="btn" type="button" value="PAPER"><br>
-      <input id="btn" type="button" value="SCISSOR"><br>
-    
-    <div class="window" style="width: 320px">
-      <div class="title-bar">
-        <div class="title-bar-text">SUMMARY</div>
-      </div>
-      <div class="window-body">
-    <p> RESULTS:</p>
-    <ul>
-        <li><p id="result"></p></li>
-        <li><p id="scores"></p></li>
-    </ul>
-      </div>
-      <div class="status-bar">
-        <p class="status-bar-field">Press F12 for inspecting code</p>
-        <p class="status-bar-field">ROCK PAPER SCISSOR</p>
-      </div>
+      <button type="button" onclick="window.location.reload()">
+        START OVER
+      </button>
     </div>
-    <br>
-
-
-
-
-
-
-
-    <button type="button" onclick="window.location.reload()">START OVER</button>
-  </div>
 
     <script src="index.js"></script>
   </body>

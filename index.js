@@ -24,6 +24,7 @@ function playRound(playerSelection, computerSelection) {
   } else if (playerSelection == "SCISSOR" && computerSelection == "ROCK") {
     computerScore++, attemps--;
   } else if (playerSelection === getComputerChoice(choices)) {
+    attemps--
   }
   document.getElementById("result").innerHTML =
     "YOU => " +
@@ -71,5 +72,10 @@ function disablebuttons() {
       elem.disabled = true;
     }),
       alert("YOU LOSE");
+  } else if (attemps == 0 && playerScore == computerScore){
+    buttons.forEach((elem) => {
+      elem.disabled = true;
+    }),
+      alert("TIE");
   }
 }
